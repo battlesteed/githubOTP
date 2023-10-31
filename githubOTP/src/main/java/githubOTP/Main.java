@@ -14,8 +14,10 @@ import com.amdelamar.jotp.type.Type;
 public class Main {
 
 	public static void main(String[] args) throws IOException, InvalidKeyException, IllegalArgumentException, NoSuchAlgorithmException {
+		System.setProperty("file.encoding", "UTF-8");
 		String hexTime = OTP.timeInHex(System.currentTimeMillis(), 30);
-        String code = OTP.create(getUserInput("请输入two-factor secret"), hexTime, 6, Type.TOTP);
+        String userInput = (args.length > 0 && !"你的two-factor secret".equals(args[0]))? args[0]:getUserInput("请输入two-factor secret.也可以直接把two-factor secret写进run.bat");
+		String code = OTP.create(userInput, hexTime, 6, Type.TOTP);
         
         copy2Clipboard(code);
         
