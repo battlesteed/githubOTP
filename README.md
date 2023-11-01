@@ -15,6 +15,15 @@
 1. 下载自带java环境的压缩包 [githubOTPWithJre.zip](https://github.com/battlesteed/githubOTP/raw/master/githubOTP/githubOTPWithJre.7z);
 2. 解压双击run.bat
 
+# 注意事项!!!!!!
+## two-factor secret和github-recovery-codes非常重要,一定要妥善保管!!!!!!!!!
+### 生成的One Time Password不对
+One Time Password是基于时间生成的,请及时输入否则会过期.
+
+请重新生成,重试.
+
+若还是不对,请校准你电脑的时间后重试.
+
 ### 可以保存two-factor secret吗
 可以.
 
@@ -24,6 +33,3 @@
 java -Dfile.encoding=UTF-8 -jar target/githubOTP-0.0.1-SNAPSHOT-jar-with-dependencies.jar "你的two-factor secret"
 `
 
-
-# 注意事项!!!!!!
-## two-factor secret和github-recovery-codes非常重要,一定要妥善保管!!!!!!!!!
