@@ -1,5 +1,5 @@
 # githubOTP
-解决GitHub登陆二次验证码问题
+解决GitHub登陆二次验证码问题.用two-factor secret生成 One Time Password. 
 
 ### 功能
   叫我登陆GitHub还像某信一样,PC操作了之后还要~~从裤裆~~掏出手机操作一下,这样的窒息操作,我是坚决抵制的.
